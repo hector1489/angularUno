@@ -1,0 +1,15 @@
+<section>
+  @if (isLoggedIn) {
+    <p>Welcome, {{ username }}!</p>
+  } @else {
+    <form (ngSubmit)="login(usernameInput.value, passwordInput.value)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" #usernameInput>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" #passwordInput>
+
+      <button type="submit">Login</button>
+    </form>
+  }
+</section>
