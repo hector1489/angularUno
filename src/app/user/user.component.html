@@ -1,15 +1,20 @@
+
 <section>
   @if (isLoggedIn) {
-    <p>Welcome, {{ username }}!</p>
+    <p class="alert alert-success">Welcome, {{ username }}!</p>
   } @else {
-    <form (ngSubmit)="login(usernameInput.value, passwordInput.value)">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" #usernameInput>
+    <form class="mt-3" (ngSubmit)="login(usernameInput.value, passwordInput.value)">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" #usernameInput>
+      </div>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" #passwordInput>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" #passwordInput>
+      </div>
 
-      <button type="submit">Login</button>
+      <button type="submit" class="btn btn-primary">Login</button>
     </form>
   }
 </section>
