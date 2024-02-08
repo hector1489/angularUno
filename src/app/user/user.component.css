@@ -8,3 +8,9 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+form {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
